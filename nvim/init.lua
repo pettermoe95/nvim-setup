@@ -12,15 +12,3 @@ local function get_db_connections(file_path)
 end
 -- Load database connections from the file
 vim.g.dbs = get_db_connections("config/db-connections")
-local lspconfig = require("lspconfig")
-
-lspconfig.tsserver.setup({
-	init_options = {
-		plugins = {
-			name = "@vue/typescript-plugins",
-			location = "add/to/node_modules/in/project",
-			languages = { "javascript", "typescript", "vue" },
-		},
-	},
-	filetypes = { "javascript", "typescript", "vue" },
-})
