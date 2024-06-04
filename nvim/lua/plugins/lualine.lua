@@ -1,6 +1,9 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+		"letieu/harpoon-lualine",
+	},
 	config = function()
 		local lualine = require("lualine")
 		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
@@ -64,6 +67,15 @@ return {
 					{ "encoding" },
 					{ "fileformat" },
 					{ "filetype" },
+				},
+				lualine_y = {
+					{
+						"harpoon2",
+						icon = "󰐃",
+						indicators = { "1", "2", "3", "4", "5" },
+						active_indicators = { "[1]", "[2]", "[3]", "[4]", "[5]" },
+					},
+					"searchcount",
 				},
 			},
 		})
