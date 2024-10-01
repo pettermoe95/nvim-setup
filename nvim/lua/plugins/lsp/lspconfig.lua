@@ -89,7 +89,7 @@ return {
 							globals = { "vim" },
 						},
 						completion = {
-							callSnipper = "Replace",
+							callSnippet = "Replace",
 						},
 					},
 				})
@@ -109,15 +109,15 @@ return {
 						-- Enable completion triggered by <c-x><c-o>
 						vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 						-- Enable LSP incremental sync
-						client.resolved_capabilities.document_formatting = true
-						client.resolved_capabilities.document_range_formatting = true
-						client.resolved_capabilities.document_highlight = true
-						client.resolved_capabilities.workspace_symbol = true
-						client.resolved_capabilities.document_symbol = true
-						client.resolved_capabilities.code_action = true
-						client.resolved_capabilities.code_lens = true
-						client.resolved_capabilities.rename = true
-						client.resolved_capabilities.hover = true
+						client.server_capabilities.document_formatting = true
+						client.server_capabilities.document_range_formatting = true
+						client.server_capabilities.document_highlight = true
+						client.server_capabilities.workspace_symbol = true
+						client.server_capabilities.document_symbol = true
+						client.server_capabilities.code_action = true
+						client.server_capabilities.code_lens = true
+						client.server_capabilities.rename = true
+						client.server_capabilities.hover = true
 					end,
 					flags = {
 						debounce_text_changes = 200,
