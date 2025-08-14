@@ -1,6 +1,7 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.formatting.prettier"
+    "lazyvim.plugins.extras.formatting.prettier",
+    "lazyvim.plugins.extras.lsp.neoconf"
   ],
   "install_version": 7,
   "news": {
