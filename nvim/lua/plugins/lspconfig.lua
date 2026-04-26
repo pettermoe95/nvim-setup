@@ -10,7 +10,7 @@ return {
 			},
 
 			-- TypeScript / React
-			tsserver = {},
+			ts_ls = {},
 
 			-- Rust
 			rust_analyzer = {},
